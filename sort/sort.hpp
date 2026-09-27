@@ -5,17 +5,17 @@
 #include <vector>
 
 
-template<typename TNumeric>
+template<typename T>
 void bubblesort(
-    std::vector<TNumeric> &v, 
-    bool (*is_gt)(const TNumeric lhs, const TNumeric rhs)
+    std::vector<T> &v, 
+    bool (*is_gt)(const T lhs, const T rhs)
 ) 
 {
 	const int32_t n = v.size();
 	for (int32_t i = 0; i < n; i++) {
 		for (int32_t j = 1; j < n; j++) {
 			if (is_gt(v[j-1], v[j])) {
-				TNumeric tmp = v[j];
+				T tmp = v[j];
 				v[j] = v[j-1];
 				v[j-1] = tmp;
 			}
@@ -24,10 +24,10 @@ void bubblesort(
 }
 
 
-template<typename TNumeric>
+template<typename T>
 void selectionsort(
-    std::vector<TNumeric> &v, 
-    bool (*is_gt)(const TNumeric lhs, const TNumeric rhs)
+    std::vector<T> &v, 
+    bool (*is_gt)(const T lhs, const T rhs)
 ) 
 {
 	const int32_t n = v.size();
@@ -38,15 +38,15 @@ void selectionsort(
 				minidx = j;
 			}
 		}
-		TNumeric tmp = v[i];
+		T tmp = v[i];
 		v[i] = v[minidx];
 		v[minidx] = tmp;
 	}
 }
 
 
-template<typename TNumeric>
-void mergesort(std::vector<TNumeric> &v) 
+template<typename T>
+void mergesort(std::vector<T> &v) 
 {
 	// TODO:
 }
