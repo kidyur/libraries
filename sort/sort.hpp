@@ -9,7 +9,7 @@ template<typename TNumeric>
 void bubblesort(
     std::vector<TNumeric> &v, 
     bool (*is_gt)(const TNumeric lhs, const TNumeric rhs)
-) noexcept
+) 
 {
 	const int32_t n = v.size();
 	for (int32_t i = 0; i < n; i++) {
@@ -28,7 +28,7 @@ template<typename TNumeric>
 void selectionsort(
     std::vector<TNumeric> &v, 
     bool (*is_gt)(const TNumeric lhs, const TNumeric rhs)
-) noexcept
+) 
 {
 	const int32_t n = v.size();
 	for (int32_t i = 0; i < n; i++) {
@@ -46,7 +46,7 @@ void selectionsort(
 
 
 template<typename TNumeric>
-void mergesort(std::vector<TNumeric> &v) noexcept
+void mergesort(std::vector<TNumeric> &v) 
 {
 	// TODO:
 }
